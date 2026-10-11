@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>ПР3 — Эксперименты DOM и событий</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 720px; margin: 24px auto; padding: 0 16px; }
+      section { background: #f4f6f8; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+      h2 { font-size: 16px; margin: 0 0 8px; }
+      button { padding: 6px 12px; border: 1px solid #cbd5e1; background: #fff; border-radius: 6px; cursor: pointer; margin-top: 6px; }
+     .log { background: #1f2933; color: #d1d5db; padding: 12px; border-radius: 6px; font-family: monospace; font-size: 13px; max-height: 200px; overflow-y: auto; margin-top: 8px; white-space: pre-wrap; }
+      #exp5-button span { padding: 4px 6px; }
+      code { background: #e2e8f0; padding: 1px 4px; border-radius: 3px; }
+    </style>
+  </head>
+  <body>
+    <h1>Эксперименты DOM и событий</h1>
+
+    <section>
+      <h2>Эксперимент 1. Отсутствующий элемент</h2>
+      <button data-test="1">Запустить</button>
+      <div class="log" data-log="1"></div>
+    </section>
+
+    <section>
+      <h2>Эксперимент 2. dataset.taskId</h2>
+      <button data-test="2" data-task-id="23">Запустить (на кнопке data-task-id="23")</button>
+      <div class="log" data-log="2"></div>
+    </section>
+
+    <section>
+      <h2>Эксперимент 3. Статичный NodeList</h2>
+      <button data-test="3">Добавить запись дважды</button>
+      <ul id="exp3-list"><li>Изначальная запись</li></ul>
+      <div class="log" data-log="3"></div>
+    </section>
+
+    <section>
+      <h2>Эксперимент 4. textContent vs HTML</h2>
+      <button data-test="4">Изменить заголовок</button>
+      <h3 id="exp4-title">Изначальный заголовок</h3>
+      <div class="log" data-log="4"></div>
+    </section>
+
+    <section>
+      <h2>Эксперимент 5. Всплытие события</h2>
+      <button data-test="5" id="exp5-button">
+        <span id="exp5-span">Нажми на меня (вложенный span)</span>
+      </button>
+      <div class="log" data-log="5"></div>
+    </section>
+
+    <script type="module" src="./dom-events.js"></script>
+  </body>
+</html>

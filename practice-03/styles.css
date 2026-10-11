@@ -1,0 +1,163 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+.app-header {
+  padding: 16px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e3e8ee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.dataset-nav a {
+  margin-left: 12px;
+  color: #2f6feb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dataset-nav a:hover { text-decoration: underline; }
+
+.app-main {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filters button {
+  padding: 8px 14px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filters button:hover { background: #f1f5f9; }
+.filters button.is-active {
+  background: #2f6feb;
+  color: #ffffff;
+  border-color: #2f6feb;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.stat { display: flex; gap: 6px; }
+.stat-label { color: #64748b; }
+
+.operation-message {
+  color: #b42318;
+  background: #fee4e2;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.empty-message {
+  color: #475569;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-card {
+  background: #ffffff;
+  border: 1px solid #e3e8ee;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.task-card.is-completed {
+  background: #f8fafc;
+  border-color: #dbe2ea;
+}
+
+.task-title {
+  margin: 0 0 6px;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.task-status,
+.task-priority {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.task-priority[data-priority="high"]   { color: #b42318; }
+.task-priority[data-priority="medium"] { color: #b54708; }
+.task-priority[data-priority="low"]    { color: #027a48; }
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.task-actions button {
+  padding: 6px 12px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.task-actions button:hover { background: #f1f5f9; }
+
+.task-actions button[data-action="delete"]:hover {
+  background: #fee4e2;
+  border-color: #fda29b;
+  color: #b42318;
+}
+
+button:focus-visible {
+  outline: 2px solid #2f6feb;
+  outline-offset: 2px;
+}
+
+[hidden] { display: none !important; }

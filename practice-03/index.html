@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПР3 — Список задач</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Список задач</h1>
+      <nav class="dataset-nav">
+        <a href="./index.html">Общий набор</a>
+        <a href="./index.html?dataset=variant">Свой вариант</a>
+      </nav>
+    </header>
+
+    <main class="app-main">
+      <section class="filters" id="task-filters" aria-label="Фильтры задач">
+        <button type="button" data-filter="all" class="is-active" aria-pressed="true">
+          <span class="action-label">Все</span>
+        </button>
+        <button type="button" data-filter="pending" aria-pressed="false">
+          <span class="action-label">В работе</span>
+        </button>
+        <button type="button" data-filter="completed" aria-pressed="false">
+          <span class="action-label">Выполненные</span>
+        </button>
+      </section>
+
+      <section class="summary" id="task-summary" aria-label="Сводка">
+        <div class="stat">
+          <span class="stat-label">Всего:</span>
+          <span data-stat="total">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Выполнено:</span>
+          <span data-stat="completed">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Осталось:</span>
+          <span data-stat="pending">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Прогресс:</span>
+          <span data-stat="progress">0.0%</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Показано:</span>
+          <span data-stat="visible">0</span>
+        </div>
+      </section>
+
+      <p class="operation-message" id="operation-message" hidden></p>
+      <p class="empty-message" id="empty-message" hidden></p>
+
+      <ul class="task-list" id="task-list" aria-label="Список задач"></ul>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

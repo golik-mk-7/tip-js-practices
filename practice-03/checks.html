@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>ПР3 — Браузерные проверки</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+      body { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+      h1 { font-size: 20px; }
+      #report { background: #1f2933; color: #d1d5db; padding: 16px; border-radius: 8px; font-family: monospace; font-size: 13px; white-space: pre-wrap; }
+      .ok { color: #4ade80; }
+      .fail { color: #f87171; }
+      #test-frame { width: 100%; height: 600px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 16px; background: #fff; }
+      #summary { font-weight: bold; margin-top: 12px; font-size: 16px; }
+    </style>
+  </head>
+  <body>
+    <h1>ПР3 — Проверка браузерного интерфейса</h1>
+    <p>Проверки запускаются автоматически внутри iframe. Не нажимайте элементы в области приложения до завершения.</p>
+    <div id="report"></div>
+    <div id="summary"></div>
+    <iframe id="test-frame" src="./index.html"></iframe>
+    <script type="module" src="./checks/browser.checks.js"></script>
+  </body>
+</html>
